@@ -1,14 +1,14 @@
 # WE_Shield - File Integrity Monitoring System (FIM)
 
-WE_Shield is a lightweight, real-time File Integrity Monitoring (FIM) agent written in Python. It continuously monitors target directories for file creation or modification events and instantly dispatches security alerts via Telegram.
+WE_Shield is a lightweight, real-time File Integrity Monitoring (FIM) agent written in Python. It continuously monitors target directories for file integrity events and instantly dispatches detailed security alerts via Telegram.
 
 ---
 
 ## Key Features
-- Real-Time Event Monitoring: Utilizes system-level event hooks for minimal latency using watchdog.
-- Automated Telegram Alerts: Instant security notifications dispatched straight to Telegram channels via Telegram Bot API.
-- Secure Credential Isolation: Built with operational security best practices, ensuring API tokens and Chat IDs are handled safely.
-- Lightweight & Efficient: Runs seamlessly in the background with minimal system resource consumption.
+- Comprehensive Event Monitoring: Tracks creation, modification, deletion, and renaming/moving of files in real time.
+- Detailed Telegram Alerts: Delivers immediate security notifications with structured event types and exact timestamps.
+- Secure Credential Isolation: Built with operational security best practices to isolate API tokens and Chat IDs.
+- Lightweight & Efficient: Runs seamlessly in the background using system-level event hooks with minimal resource overhead.
 
 ---
 
