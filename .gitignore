@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+monitored_folder/
+venv/
+.venv/
+test_alert.py
+.env
