@@ -1,20 +1,43 @@
-# WE_Shield - File Integrity Monitoring System (FIM)
+# WE_Shield - File Integrity Monitoring System (FIM) 🛡️
 
-WE_Shield is a lightweight, real-time File Integrity Monitoring (FIM) agent written in Python. It continuously monitors target directories for file integrity events, calculates cryptographic hashes to detect actual content tampering, and dispatches detailed security alerts via Telegram.
-
----
-
-## Key Features
-- **Cryptographic Hash Verification**: Utilizes SHA-256 hashing algorithm to verify file integrity and prevent false positive alerts.
-- **Comprehensive Event Monitoring**: Real-time tracking of creation, modification, deletion, and renaming/moving of files.
-- **Detailed Telegram Alerts**: Instant security notifications including exact timestamps, event types, and SHA-256 hash snippets.
-- **Secure Credential Isolation**: Implements security best practices by completely separating sensitive Telegram credentials from core application logic.
-- **Lightweight Execution**: Optimized file system auditing with minimal system resource consumption.
+**WE_Shield** is a lightweight, real-time File Integrity Monitoring (FIM) agent written in Python. It continuously audits target directories for file events, calculates SHA-256 cryptographic hashes to detect actual content tampering, and dispatches real-time security alerts via Telegram.
 
 ---
 
-## Tech Stack
-- Python 3.x
-- hashlib (SHA-256 Integrity Engine)
-- watchdog (File System Event Monitoring)
-- requests (Telegram Alert Dispatcher)
+## 🔑 Key Features
+- **SHA-256 Integrity Verification**: Calculates cryptographic hashes to confirm content modification and eliminate false positives.
+- **Real-Time Event Auditing**: Detects file creation, modification, deletion, and renaming/moving events instantly.
+- **Automated Telegram Notifications**: Sends structured security alerts containing event types, timestamps, and hash signatures.
+- **Secure Architecture**: Enforces strict credential isolation between application logic and private API keys.
+
+---
+
+## 🛠️ Tech Stack
+- **Language**: Python 3.x
+- **Core Libraries**: `hashlib` (Cryptographic Engine), `watchdog` (File System Auditor), `requests` (API Dispatcher)
+
+---
+
+## 📁 Project Structure
+```plaintext
+WE_Shield/
+├── fim_agent_public.py       # Core FIM auditing logic
+├── test_alert_public.py     # Public alert module template
+├── .gitignore               # Excluded local & private files
+└── README.md                # Project documentation
+
+## 🚀 How to Run Locally
+
+1. Clone the Repository:
+git clone https://github.com/Wejdan-Alharbi/WE_Shield.git
+cd WE_Shield
+
+2. Install Dependencies:
+pip install watchdog requests
+
+3. Configure Credentials:
+- Create a local file named test_alert.py
+- Add your Telegram BOT_TOKEN and CHAT_ID
+
+4. Start the FIM Engine:
+python fim_agent_public.py
